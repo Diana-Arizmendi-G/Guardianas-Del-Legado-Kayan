@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Acerca de la diseñadora</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .imagen-completa .image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .imagen-completa {
+      min-height: 90vh;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 2rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slide {
+      position: relative;
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: center;
+      text-align: center;
+    }
+
+    .fecha {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0;
+    }
+
+    .image-container img {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease;
+      border-radius: 0;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay-text {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .details-button {
+      padding: 0.5rem 1rem;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="is-preload">
+  <div id="wrapper" class="divided">
+
+    <!-- Sección principal -->
+    <section class="wrapper spotlight style1 orient-right content-align-left image-position-center imagen-completa">
+      <div class="content">
+        <h2>Acerca de la diseñadora</h2>
+        <p>¡Hola! soy Diana Arizmendi González, estudiante de diseño industrial en 7mo semestre en la Universidad Anáhuac México. Interesada en la decoración, diseño de interiores, mobiliario, joyería, envase y empaque, fotografía, moda y arquitectura; y apasionada por la exploración de nuevas tecnologías y técnicas artesanales para la creación de productos estéticos y funcionales. Esta sección muestra un poco de mi proceso, proyectos y momentos especiales detrás del diseño.</p>
+      </div>
+      <div class="image">
+        <img src="images2/Diseñadora-2.png" alt="Gargantilla Eterna Kayan" />
+      </div>
+    </section>
+
+    <!-- Carrusel de proyectos -->
+    <section class="wrapper style1 align-center">
+      <div class="carousel">
+
+        <!-- Slide 1 - Historia emocional -->
+        <div class="slide">
+          <div class="fecha">2022</div>
+          <div class="image-container">
+            <img src="images2/Diseñadora-3.jpg" alt="Comienzos de una diseñadora" />
+            <div class="overlay">
+              <div class="overlay-text">Comienzos de una diseñadora</div>
+              <button class="button small" onclick="openModal(
+  'images2/Diseñadora-4.jpg',
+  '“No todo inicio debe ser perfecto ni certero; en las torpezas y la incertidumbre también se teje el proceso creativo de la vida”.',
+  `<p>Durante gran parte de mi vida, creí que la arquitectura era mi destino; hasta que uno se tropieza, siendo necesario para empezar desde cero donde uno realmente pertenece. Desde niña, me apasionaba dibujar, construir cosas con cartón, modificar ropa vieja y transformar objetos comunes en algo nuevo. Era una necesidad casi visceral de crear, de materializar ideas, incluso cuando muchas veces el resultado no era perfecto. No dudaba de mi aprecio por los espacios ni por los interiores o la estética arquitectónica, pero entendí con claridad que algo no encajaba en mí. Mi relación con la carrera fue quebrantada, una elección que puede parecer imperdonable, pero que me permitió reconstruirme desde el lugar donde verdaderamente pertenezco. </p>
+   <p>Sin rumbo, y llena de incertidumbre, me sentía atascada, perdida y presionada por las expectativas de los demás – mis padres, mi familia, amigos, incluso la misma sociedad, y especialmente por las mías. En ese tiempo aprendí mucho sobre las personas: El apoyo viene de quien menos esperas, y otras veces, la decepción llega de aquellos en quienes más confiabas. Y muchas veces hay momentos en los que uno debe avanzar solo, cuando nadie está dispuesto a caminar a tu lado; y, aun así, el camino continúa. </p>
+   <p>La idea de diseñar objetos, resolver necesidades, unir creatividad con funcionalidad… todo cobraba sentido. Pero también llegaron los miedos; dudas que muchas veces nacen de nuestra propia mente, y otras, de las palabras hirientes de quienes no creyeron en nosotros. El diseño me encontró a mí y eso, me ayudo a reconstruirme, a creer otra vez en lo que podía lograr y sobre todo a entender que a veces, perderse, es la única manera de encontrarse de verdad. Aquí comienza mi trayectoria como diseñadora.</p>`
+)">Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aquí continúan los demás slides (los puedes personalizar igual que el primero) -->
+        <div class="slide">
+          <div class="fecha">2023</div>
+          <div class="image-container">
+            <img src="images2/Rincón-De-La-Esperanza-1.jpg" alt="Rincón de la Esperanza" />
+            <div class="overlay">
+              <div class="overlay-text">Inspiración para el alma de una diseñadora novata</div>
+<button class="button small" onclick="openModal(
+  'images2/Rincón-2.jpg',
+  '“El diseño que viene desde lo profundo del corazón es el que, por sobre todo, deja una huella más allá de lo tangible”.',
+  `<p>Mi primer acercamiento al diseño industrial comenzó con “Rincón de la Esperanza”, un proyecto que no solo inspiró mi alma de diseñadora novata, sino que también dejó una huella profunda en los corazones de los niños para quienes fue creado. Fue entonces en donde conocí a Ruth Rodea y Camila Sanguino, quienes se convertirían en mis compañeras inseparables a lo largo de mi carrera. Ninguna de nosotras tenía experiencia trabajando con madera, metal, ni herramientas especializadas, pero decidimos aventurarnos con el corazón por delante. Este proyecto fue construido con nuestras propias manos, aprendiendo en el camino entre errores, descubrimientos y esfuerzo compartido.</p>
+   <p>A lo largo del proceso no solo enfrentamos retos técnicos, sino también una situación compleja que marcó aquel periodo de nuestras vidas. Sin embargo, fue precisamente esa experiencia la que nos permitió fortalecer un vínculo especial con el Dr. Jorge Cacho Marín, nuestro profesor y mentor, quien confió en nosotras y nos impulsó a seguir diseñando con propósito. “Rincón de la Esperanza“ no es solo una colección de mobiliario para niños con cáncer de la Fundación Mark, es el reflejo de una historia de resiliencia, vocación y crecimiento. Es prueba de que cuando el diseño nace desde el corazón – aún en medio de la incertidumbre – puede transformar no solo espacios, sino también experiencias.</p>
+   <p><a href='https://www.instagram.com/livs_design_/' target='_blank' rel='noopener noreferrer' style='color: #2563eb; text-decoration: underline;'>Descubre más sobre el proyecto</a>.</p>`
+)">Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="fecha">2023</div>
+          <div class="image-container">
+            <img src="images2/Silla-Antropométrica-1.jpg.png" alt="Silla Antropométrica" />
+            <div class="overlay">
+              <div class="overlay-text">La duda de muchos, que hoy se convirtió en inspiración</div>
+<button class="button small" onclick="openModal(
+  'images2/Silla-Antropométrica-2.jpg',
+  '“Lo que en su momento fue subestimado, hoy es inspiración y referencia para quienes vienen detrás”',
+  `<p>A veces, un proyecto no nace del plan original, sino de la intuición de un profesor y la disposición de sus alumnos La “Silla Antropométrica” fue uno de esos casos. </p>
+   <p>Lo que comenzó como una propuesta olvidada del Dr. Jorge Cacho Marín, cobró vida gracias al entusiasmo de mi equipo y yo – Ruth Rodea, Camila Sanguino, Sandra Huesca – y el acompañamiento cercano de nuestro profesor y mentor. Lo que comenzó como un reto técnico, se convirtió rápidamente en una oportunidad para aportar algo real a nuestra facultad; diseñamos y fabricamos desde cero una silla funcional, ergonómica y pensada para perdurar.</p>
+   <p>Concebida como una herramienta académica, esta silla permite registrar múltiples mediciones del cuerpo humano de manera precisa y eficiente. Fue aprobada por la coordinación académica y, desde entonces, ha sido utilizada en las clases de ergonomía y diseño de mobiliario, sirviendo como apoyo técnico para futuras generaciones.</p>
+   <p>Más allá de su función técnica, esta silla representa una semilla plantada con esfuerzo, visión y compromiso. Es testimonio de que cuando se diseñan objetos con propósito y convicción, pueden trascender su utilidad y convertirse en legado. Lo que alguna vez fue subestimado, hoy es inspiración para quienes vienen detrás.</p>
+   <p><a href='https://www.instagram.com/livs_design_/' target='_blank' rel='noopener noreferrer' style='color: #2563eb; text-decoration: underline;'>Conocer más sobre el proyecto</a>.</p>`
+)">Detalles</button>         
+</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="fecha">2024</div>
+          <div class="image-container">
+            <img src="images2/Premios-1.jpg" alt="Premios" />
+            <div class="overlay">
+              <div class="overlay-text">Reconocimiento al compromiso con el diseño.</div>
+<button class="button small" onclick="openModal(
+  'images2/Premios-1.jpg',
+  '“Un premio no celebra un resultado, sino la pasión y esfuerzo dedicados a lo largo del camino”.',
+  `<p>En el marco del vigésimo Simposio de Diseño de la Universidad Anáhuac, “Rincón de la Esperanza” y la “Silla Antropométrica” fueron distinguidos con del “Premio Junior al Mejor Proyecto del Año” .</p>
+   <p>Lejos de tratarse de una simple condecoración, este reconocimiento simbolizó algo más profundo: la validación de una filosofía de diseño basada en la empatia, el trabajo ético y el aprendizaje genuino. Quien diseña con el corazón también merece ser celebrado.</p>
+   <p><a href='https://www.instagram.com/livs_design_/' target='_blank' rel='noopener noreferrer' style='color: #2563eb; text-decoration: underline;'>Conocer más sobre los proyectos reconocidos</a>.</p>`
+)">Detalles</button>              
+</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="fecha">2024</div>
+          <div class="image-container">
+            <img src="images2/Pet-O-Walk-1.jpg" alt="Pet-O Walk" />
+            <div class="overlay">
+              <div class="overlay-text">Ruedas que dan libertad.</div>
+<button class="button small" onclick="openModal(
+  'images2/Pet-O-Walk-2.jpg',
+  '“En un mundo hecho para correr, hasta el más pequeño corazón merece una oportunidad para seguir corriendo hacia el sol.”',
+  `<p>Encontré inspiración en aquellos que muchas veces son ignorados: los animales con discapacidad. “Pet-O Walk” no fue solo un proyecto, fue una respuesta desde el corazón, un acto de amor hacia quienes no pueden hablar, pero sienten. Hacia aquellos perritos que, por maltrato, accidentes o nacimiento, han perdido una parte de sí… pero no las ganas de vivir.</p>
+   <p>Diseñar este carrito fue imaginar una segunda oportunidad para ellos. Una forma de devolverles algo de libertad, de juego, de movimiento. En un mundo que a menudo se diseña solo para nosotros – para lo cómodo, lo estético, lo funcional – quise detenerme a mirar hacia los márgenes. A los seres que también merecen ser vistos, cuidados y acompañados. </p>
+   <p>El diseño industrial no empieza en una computadora ni termina en una maqueta; no es resultado de una tendencia, sino de la compasión y empatía que transforma vidas. </p>
+   <p><a href='https://anyflip.com/owwlp/hwud/' target='_blank' rel='noopener noreferrer' style='color: #2563eb; text-decoration: underline;'>Conocer más sobre el proyecto</a>.</p>`
+)">Detalles</button>             
+</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="fecha">2024</div>
+          <div class="image-container">
+            <img src="images3/ColeccionGuardianasDelLegadoKayan1.png" alt="Guardianas del Legado Kayan" />
+            <div class="overlay">
+              <div class="overlay-text">Honor a la resistencia femenina.</div>
+<button class="button small" onclick="openModal(
+  'images3/Guardianas-Del-Legado-Kayan.jpg',
+  '“Una joya brilla por la belleza de su historia, no solo por su material”',
+  `<p>Cuando descubrí la historia de las mujeres Kayan, entendí que el diseño no solo puede ser bello por sus materiales, su fabricación, o su funcionalidad, sino que también puede ser una voz. Inspirada en su valentía, su migración forzada y su cultura ancestral, creé una colección de joyería que no pretende adornar o decorar el cuerpo, sino narrar y visibilizar almas silenciadas.</p>
+   <p>Diseñar Guardianas del Legado Kayan, fue un parteaguas en mi carrera. Por primera vez entendí cómo una pieza puede abrazar una historia, y cómo los materiales pueden convertirse en símbolo de memoria y dignidad. Este proyecto no nació de una tendencia, sino de una necesidad de justicia, identidad y homenaje.</p>
+   <p>Detrás de cada forma hay una historia que merece ser contada. “Guardianas del Legado Kayan” no solo me permitió crear con las manos, sino también con el alma; esta colección fue mirar hacia otras realidades, dejar de lado los propios límites y sentir con otra piel. </p>
+   <p><a href='https://www.instagram.com/livs_design_/' target='_blank' rel='noopener noreferrer' style='color: #2563eb; text-decoration: underline;'>Conocer más sobre el proyecto</a>.</p>`
+)">Detalles</button>              
+</div>
+          </div>
+        </div>
+
+         <div class="slide">
+          <div class="fecha">2024</div>
+          <div class="image-container">
+            <img src="images2/Altar-De-Muertos-1.jpg" alt="Altar de Muertos (Montreal)" />
+            <div class="overlay">
+              <div class="overlay-text">Puente entre dos mundos: Altar de muertos.</div>
+<button class="button small" onclick="openModal(
+  'images2/Altar-De-Muertos-2.jpg',
+  '“El mayor acto de honor mexicano es el recuerdo de los nuestros; una memoria y nostalgia que no se apaga con el tiempo ni con la muerte”.',
+  `<p>Expuesto en el Instituto Cultural de México Montreal, el altar de muertos creado por mí y mi equipo – Ruth Rodea, Camila Sanguino, Sandra Huesca y Paulina Garza – no fue solo un adorno o pieza decorativa, sino un acto de memoria viva hacia la cultura mexicana y su tradición más simbólica: El “Día de Muertos”, celebrada en el mes de Noviembre.</p>
+   <p>Este altar representa un puente espiritual entre territorios y dimensiones, donde las flores, maíz, sal, y luz encendieron un diálogo entre dos mundos, el de los vivos y el de los que ya se han ido. </p>
+   <p>Inspirado en la cosmovisión mesoamericana, este altar no solo rinde homenaje a nuestros difuntos, sino que también honra la herencia colectiva que nos forma como pueblo. Su diseño, además, encuentra inspiración en la sensibilidad del arquitecto Luis Barragán, cuyas obras evocaban con fuerza el color, la espiritualidad y el silencio.</p>
+   <p>El altar fue una forma de habitar la memoria. Un gesto de resistencia cultural. Un espacio para recordar que, incluso lejos de casa, seguimos encendiendo velas contra el olvido.</p>
+   <p><a href='https://www.instagram.com/livs_design_/' target='_blank' rel='noopener noreferrer' style='color: #2563eb; text-decoration: underline;'>Conocer más sobre el proyecto</a>.</p>`
+)">Detalles</button>             
+</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="fecha">2024</div>
+          <div class="image-container">
+            <img src="images2/Mictlampa-1.jpg" alt="Mictlampa" />
+            <div class="overlay">
+              <div class="overlay-text">Inspiración desde las raíces mexicanas.</div>
+<button class="button small" onclick="openModal(
+  'images2/Mictlampa-2.jpg',
+  '“Donde las raíces nos forman, y los difuntos nos esperan con los brazos abiertos en el Mictlán”.',
+  `<p>Presentada en Zona Maco 2025.</p>
+   <p>Inspirada en el Mictlán, el inframundo mexica, y en la dualidad que atraviesa la cultura mexicana entre la vida y la muerte; creamos “Mictlampa”, una pieza de obsidiana que no pretende adornar, sino invocar. Junto con mi equipo – Ruth Rodea, Camila Sanguino, Sandra Huesca y Paulina Garza – diseñamos un fragmento tallado que da forma al recuerdo, a la memoria que sobrevive en cada zona, en cada ritual y en cada despedida.</p>
+   <p>La obsidiana, uno de los materiales más antiguos y venerados de México, dejó de ser solo herramienta o adorno, para convertirse en símbolo. En nuestras manos, se transformó en una ofrenda esculpida: un eco del viaje eterno que las almas emprendían para renacer, un recordatorio del vínculo inquebrantable con quienes nos precedieron.</p>
+   <p>Nuestra obra no nació de las tendencias, sino de la necesidad de reconectar con nuestras raíces, de mirar al pasado no como algo lejano, sino como algo que aún vive en nosotros. México no considera la muerte como fin, sino como tránsito y transformación. </p>
+   <p><a href='https://www.instagram.com/livs_design_/' target='_blank' rel='noopener noreferrer' style='color: #2563eb; text-decoration: underline;'>Conocer más sobre el proyecto</a>.</p>`
+)">Detalles</button>              
+</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" style="
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+      padding: 2rem;
+    ">
+      <div style="
+        background: white;
+        padding: 2rem;
+        max-width: 1300px;
+        width: 90%;
+        border-radius: 1rem;
+        text-align: center;
+        position: relative;
+      ">
+        <button onclick="document.getElementById('modal').style.display='none'" style="
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          background: #222;
+          color: white;
+          border: none;
+          padding: 0.3rem 0.7rem;
+          font-size: 1rem;
+          border-radius: 0.5rem;
+          cursor: pointer;
+        ">X</button>
+
+     <div style="display: flex; flex-direction: row; gap: 1rem; flex-wrap: wrap;">
+  <!-- LADO IZQUIERDO: Imagen (más delgado) -->
+  <div style="flex: 1; min-width: 150px;">
+    <img id="modal-img" src="" style="width: 100%; border-radius: 0;" />
+  </div>
+
+  <!-- LADO DERECHO: Texto (más ancho) -->
+<div style="flex: 2; min-width: 300px; text-align: left; padding-right: 3rem;">
+    <p id="modal-quote" style="font-style: italic; margin-bottom: 0.5rem; font-size: 18px;"></p>
+    <p id="modal-text" style="text-align: justify; font-size: 15px;"></p>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="wrapper style1 align-center">
+      <div class="inner">
+        <ul class="icons">
+          <li><a href="https://www.facebook.com/dianne.arizmendi.33" class="icon brands style2 fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+          <li><a href="https://www.instagram.com/livs_design_/" class="icon brands style2 fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+          <li><a href="http://www.linkedin.com/in/diana-arizmendi-a35880206" class="icon brands style2 fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:diana.arizmendi.glez@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <p>&copy; Livier Design: <a href="https://www.instagram.com/livs_design_/">Diana Arizmendi González</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Botón volver -->
+    <section class="wrapper style1 align-center">
+      <ul class="actions stacked">
+        <li><a href="index.html" class="button">Volver al inicio</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function openModal(imgSrc, quote, text) {
+  document.getElementById('modal-img').src = imgSrc;
+  document.getElementById('modal-quote').textContent = quote;
+  document.getElementById('modal-text').innerHTML = text; // <- importante: usamos innerHTML
+  document.getElementById('modal').style.display = 'flex';
+    }
+  </script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.poptrox.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

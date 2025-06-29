@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfb;
+      color: #222;
+    }
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .quote {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      color: #555;
+    }
+    .gallery {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+    }
+
+    /* Modal */
+    #modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+    }
+    #modal img {
+      max-width: 90%;
+      max-height: 80vh;
+      margin-bottom: 1rem;
+    }
+    #modal-caption {
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+    }
+    #modal button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <h2>Galería</h2>
+    <p class="quote">“Una joya brilla por la belleza de su historia, no solo por su material”</p>
+
+    <div class="gallery">
+      <div class="gallery-item" onclick="openModal('images3/ColeccionGuardianasDelLegadoKayan1.png', 'Colección Guardianas del Legado Kayan')">
+        <img src="images3/ColeccionGuardianasDelLegadoKayan1.png" alt="Colección Guardianas del Legado Kayan">
+      </div>
+      <div class="gallery-item" onclick="openModal('images3/ColeccionGuardianasDelLegadoKayan2.png', 'Colección Guardianas del Legado Kayan')">
+        <img src="images3/ColeccionGuardianasDelLegadoKayan2.png" alt="Colección Guardianas del Legado Kayan">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Gargantilla-Eterna-Kayan-1.png', 'Gargantilla Eterna Kayan')">
+        <img src="images/Gargantilla-Eterna-Kayan-1.png" alt="Gargantilla Eterna Kayan">
+      </div>
+	    <div class="gallery-item" onclick="openModal('images/Gargantilla-Eterna-Kayan-2.png', 'Gargantilla Eterna Kayan')">
+        <img src="images/Gargantilla-Eterna-Kayan-2.png" alt="Gargantilla Eterna Kayan">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Gargantilla-Eterna-Kayan-3.png', 'Gargantilla Eterna Kayan')">
+        <img src="images/Gargantilla-Eterna-Kayan-3.png" alt="Gargantilla Eterna Kayan">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Gargantilla-Eterna-Kayan-4.png', 'Gargantilla Eterna Kayan')">
+        <img src="images/Gargantilla-Eterna-Kayan-4.png" alt="Gargantilla Eterna Kayan">
+      </div>
+	    <div class="gallery-item" onclick="openModal('images/Gargantilla-Eterna-Kayan-5.png', 'Gargantilla Eterna Kayan')">
+        <img src="images/Gargantilla-Eterna-Kayan-5.png" alt="Gargantilla Eterna Kayan">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Gargantilla-Eterna-Kayan-6.png', 'Gargantilla Eterna Kayan')">
+        <img src="images/Gargantilla-Eterna-Kayan-6.png" alt="Gargantilla Eterna Kayan">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-1.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-1.png" alt="Brazalete del Refugio Dorado">
+      </div>
+	   <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-3.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-3.png" alt="Brazalete del Refugio Dorado">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-4.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-4.png" alt="Brazalete del Refugio Dorado">
+      </div>
+	    <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-5.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del Regugio-Dorado-5.png" alt="Brazalete del Refugio Dorado">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-11.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-11.png" alt="Brazalete del Refugio Dorado">
+      </div>
+	  <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-12', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-12.png" alt="Brazalete del Refugio Dorado">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-13.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-13.png" alt="Brazalete del Refugio Dorado">
+      </div>
+	   <div class="gallery-item" onclick="openModal('images/Pendientes-Raíces-Kayan-1.png', 'Pendientes Raíces Kayan')">
+        <img src="images/Pendientes-Raíces-Kayan-1.png" alt="Pendientes Raíces Kayan">
+      </div>
+	  <div class="gallery-item" onclick="openModal('images/Pendientes-Raíces-Kayan-2.png', 'Pendientes Raíces Kayan')">
+        <img src="images/Pendientes-Raíces-Kayan-2.png" alt="Pendientes Raíces Kayan">
+      </div>
+	  <div class="gallery-item" onclick="openModal('images3/ColeccionGuardianasDelLegadoKayan4.png', 'Colección Guardianas del Legado Kayan')">
+        <img src="images3/ColeccionGuardianasDelLegadoKayan4.png" alt="Colección Guardianas del Legado Kayan">
+      </div>
+	  <div class="gallery-item" onclick="openModal('images3/ColeccionGuardianasDelLegadoKayan5.png', 'Colección Guardianas del Legado Kayan')">
+        <img src="images3/ColeccionGuardianasDelLegadoKayan5.png" alt="Colección Guardianas del Legado Kayan">
+      </div>
+      <div class="gallery-item" onclick="openModal('images3/ColeccionGuardianasDelLegadoKayan6.png', 'Colección Guardianas del Legado Kayan')">
+        <img src="images3/ColeccionGuardianasDelLegadoKayan6.png" alt="Colección Guardianas del Legado Kayan">
+      </div>
+	   <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-9.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-9.png" alt="Brazalete del Refugio Dorado">
+      </div>
+	  <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-15.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-15.png" alt="Brazalete del Refugio Dorado">
+      </div>
+      <div class="gallery-item" onclick="openModal('images/Brazalete-del-Regugio-Dorado-16.png', 'Brazalete del Refugio Dorado')">
+        <img src="images/Brazalete-del-Regugio-Dorado-16.png" alt="Brazalete del Refugio Dorado">
+      </div>
+      <!-- Agrega más imágenes aquí siguiendo el mismo formato -->
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal">
+    <button onclick="closeModal()">X</button>
+    <img id="modal-image" src="" alt="">
+    <div id="modal-caption"></div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("modal-image").src = src;
+      document.getElementById("modal-caption").innerText = caption;
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+  <!-- Footer -->
+    <footer class="wrapper style1 align-center">
+      <div class="inner">
+        <ul class="icons">
+          <li><a href="https://www.facebook.com/dianne.arizmendi.33" class="icon brands style2 fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+          <li><a href="https://www.instagram.com/livs_design_/" class="icon brands style2 fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+          <li><a href="http://www.linkedin.com/in/diana-arizmendi-a35880206" class="icon brands style2 fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:diana.arizmendi.glez@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <p>&copy; Livier Design: <a href="https://www.instagram.com/livs_design_/">Diana Arizmendi González</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Botón volver -->
+    <section class="wrapper style1 align-center">
+      <ul class="actions stacked">
+        <li><a href="index.html" class="button">Volver al inicio</a></li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>
